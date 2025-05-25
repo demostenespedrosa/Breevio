@@ -1,4 +1,4 @@
-# Parar de Fumar - Aplicativo Web
+# Breevio - Parar de Fumar - Aplicativo Web
 
 Um aplicativo web mobile-first para ajudar pessoas a pararem de fumar, oferecendo apoio diário, metas claras e motivação contínua.
 
