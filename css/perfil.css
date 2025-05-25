@@ -1,0 +1,238 @@
+/* Estilos específicos para a tela de perfil */
+
+/* Card de Progresso */
+.progress-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.progress-header {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.progress-header h2 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xs);
+}
+
+.progress-time {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.progress-subtitle {
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-md);
+}
+
+.progress-bar-container {
+    background: var(--border-color);
+    border-radius: var(--border-radius-full);
+    height: 8px;
+    margin-bottom: var(--spacing-sm);
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: var(--primary-color);
+    height: 100%;
+    border-radius: var(--border-radius-full);
+    transition: width 0.3s ease;
+}
+
+.progress-goal {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
+}
+
+/* Menu de Opções */
+.profile-menu {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    overflow-x: auto;
+    padding-bottom: var(--spacing-sm);
+    -webkit-overflow-scrolling: touch;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-full);
+    background: var(--card-bg);
+    color: var(--text-color);
+    font-size: var(--font-size-sm);
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.menu-item i {
+    font-size: var(--font-size-lg);
+}
+
+.menu-item:hover {
+    background: var(--hover-bg);
+}
+
+.menu-item.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Seções do Perfil */
+.profile-section {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.profile-section.active {
+    display: block;
+}
+
+.profile-form {
+    background: var(--card-bg);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    background: var(--input-bg);
+    color: var(--text-color);
+    transition: border-color 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.form-control:disabled {
+    background: var(--disabled-bg);
+    cursor: not-allowed;
+}
+
+/* Seção de Recaídas */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.relapse-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.relapse-item {
+    background: var(--card-bg);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.relapse-date {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-xs);
+}
+
+.relapse-date i {
+    color: var(--primary-color);
+}
+
+.relapse-reason {
+    color: var(--text-color);
+    font-size: var(--font-size-md);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+    .profile-menu {
+        padding-bottom: var(--spacing-xs);
+    }
+
+    .menu-item {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    .menu-item span {
+        display: none;
+    }
+
+    .menu-item i {
+        margin: 0;
+    }
+
+    .profile-form {
+        padding: var(--spacing-md);
+    }
+}
+
+/* Tema Escuro */
+[data-theme="dark"] .progress-card,
+[data-theme="dark"] .profile-form,
+[data-theme="dark"] .relapse-item {
+    background: var(--dark-card-bg);
+}
+
+[data-theme="dark"] .form-control {
+    background: var(--dark-input-bg);
+    border-color: var(--dark-border-color);
+}
+
+[data-theme="dark"] .form-control:disabled {
+    background: var(--dark-disabled-bg);
+}
+
+[data-theme="dark"] .menu-item {
+    background: var(--dark-card-bg);
+    border-color: var(--dark-border-color);
+}
+
+[data-theme="dark"] .menu-item:hover {
+    background: var(--dark-hover-bg);
+} 

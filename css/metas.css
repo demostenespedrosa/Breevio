@@ -1,0 +1,295 @@
+/* Estilos específicos para a tela de metas */
+
+/* Card de Progresso */
+.progress-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.progress-header {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.progress-header h2 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xs);
+}
+
+.progress-time {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.progress-subtitle {
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-md);
+}
+
+.progress-bar-container {
+    background: var(--border-color);
+    border-radius: var(--border-radius-full);
+    height: 8px;
+    margin-bottom: var(--spacing-sm);
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: var(--primary-color);
+    height: 100%;
+    border-radius: var(--border-radius-full);
+    transition: width 0.3s ease;
+}
+
+.progress-goal {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
+}
+
+/* Menu de Categorias */
+.categories-menu {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    overflow-x: auto;
+    padding-bottom: var(--spacing-sm);
+    -webkit-overflow-scrolling: touch;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-full);
+    background: var(--card-bg);
+    color: var(--text-color);
+    font-size: var(--font-size-sm);
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.category-item i {
+    font-size: var(--font-size-lg);
+}
+
+.category-item:hover {
+    background: var(--hover-bg);
+}
+
+.category-item.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Seções de Metas */
+.goals-section {
+    margin-bottom: var(--spacing-xl);
+    animation: fadeIn 0.3s ease;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.section-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.section-count {
+    background: var(--primary-color);
+    color: white;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-full);
+}
+
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+}
+
+/* Cards de Meta */
+.goal-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.goal-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.goal-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--primary-color);
+    border-radius: var(--border-radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.goal-icon i {
+    font-size: var(--font-size-xl);
+    color: white;
+}
+
+.goal-content {
+    flex: 1;
+}
+
+.goal-content h4 {
+    font-size: var(--font-size-md);
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.goal-content p {
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.5;
+}
+
+.goal-progress {
+    background: var(--border-color);
+    border-radius: var(--border-radius-full);
+    height: 4px;
+    margin-bottom: var(--spacing-sm);
+    overflow: hidden;
+}
+
+.goal-progress .progress-bar {
+    background: var(--primary-color);
+    height: 100%;
+    border-radius: var(--border-radius-full);
+    transition: width 0.3s ease;
+}
+
+.goal-time {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+}
+
+.goal-time .separator {
+    color: var(--text-muted);
+}
+
+.goal-time .target-time {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.goal-badge {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    color: var(--success-color);
+    font-size: var(--font-size-lg);
+}
+
+/* Estados das Metas */
+.conquista-alcancada {
+    border-color: var(--success-color);
+}
+
+.conquista-alcancada .goal-icon {
+    background: var(--success-color);
+}
+
+.conquista-pendente {
+    border-color: var(--border-color);
+}
+
+.conquista-pendente .goal-icon {
+    background: var(--text-muted);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+    .categories-menu {
+        padding-bottom: var(--spacing-xs);
+    }
+
+    .category-item {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    .category-item span {
+        display: none;
+    }
+
+    .category-item i {
+        margin: 0;
+    }
+
+    .goals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .goal-card {
+        padding: var(--spacing-sm);
+    }
+}
+
+/* Tema Escuro */
+[data-theme="dark"] .progress-card,
+[data-theme="dark"] .goal-card {
+    background: var(--dark-card-bg);
+}
+
+[data-theme="dark"] .category-item {
+    background: var(--dark-card-bg);
+    border-color: var(--dark-border-color);
+}
+
+[data-theme="dark"] .category-item:hover {
+    background: var(--dark-hover-bg);
+}
+
+[data-theme="dark"] .goal-card {
+    border-color: var(--dark-border-color);
+}
+
+[data-theme="dark"] .goal-card:hover {
+    border-color: var(--primary-color);
+} 

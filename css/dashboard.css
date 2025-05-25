@@ -1,0 +1,384 @@
+/* Estilos específicos para o dashboard */
+
+/* Container Principal */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.app-header {
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: var(--spacing-md) 0;
+}
+
+.user-greeting {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-greeting h1 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin: 0;
+}
+
+.greeting-subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Conteúdo Principal */
+.app-content {
+    flex: 1;
+    padding: var(--spacing-md);
+    padding-bottom: calc(var(--bottom-nav-height) + var(--spacing-xl));
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Card de Progresso */
+.progress-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
+.progress-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.progress-title h2 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.progress-subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.progress-time {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin: var(--spacing-md) 0;
+}
+
+.progress-bar-container {
+    background: var(--border-color);
+    border-radius: var(--border-radius-full);
+    height: 8px;
+    margin-bottom: var(--spacing-sm);
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: var(--primary-color);
+    height: 100%;
+    border-radius: var(--border-radius-full);
+    transition: width 0.3s ease;
+}
+
+.progress-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--spacing-sm);
+}
+
+.progress-goal {
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
+    margin: 0;
+}
+
+.progress-percentage {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Cards de Estatísticas */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+.stat-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-sm);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
+.stat-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.stat-icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: var(--font-size-lg);
+    color: white;
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.stat-value {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+}
+
+/* Mensagem Motivacional */
+.message-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
+.message-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.message-header i {
+    font-size: var(--font-size-xl);
+    color: var(--primary-color);
+}
+
+.message-header h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin: 0;
+}
+
+.message-content {
+    font-size: var(--font-size-md);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Card de Recaída */
+.relapse-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--danger-color);
+}
+
+.relapse-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.relapse-header i {
+    font-size: var(--font-size-xl);
+    color: var(--danger-color);
+}
+
+.relapse-header h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin: 0;
+}
+
+.relapse-content {
+    font-size: var(--font-size-md);
+}
+
+.relapse-date {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-sm);
+}
+
+.relapse-reason {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Botão de Recaída */
+.btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    font-weight: 600;
+}
+
+/* Modal de Recaída */
+.modal-content {
+    border-radius: var(--border-radius-lg);
+    border: none;
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-color);
+    padding: var(--spacing-lg);
+}
+
+.modal-body {
+    padding: var(--spacing-lg);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-control {
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    border: 1px solid var(--border-color);
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.progress-card,
+.stat-card,
+.message-card,
+.relapse-card {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+    .app-content {
+        padding: var(--spacing-sm);
+    }
+
+    .progress-card {
+        padding: var(--spacing-md);
+    }
+
+    .progress-time {
+        font-size: var(--font-size-xl);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-xs);
+    }
+
+    .stat-card {
+        padding: var(--spacing-sm);
+    }
+
+    .stat-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .stat-icon i {
+        font-size: var(--font-size-md);
+    }
+
+    .stat-value {
+        font-size: var(--font-size-md);
+    }
+
+    .stat-label {
+        font-size: var(--font-size-xs);
+    }
+}
+
+/* Tema Escuro */
+[data-theme="dark"] .app-header {
+    background: var(--dark-card-bg);
+    border-color: var(--dark-border-color);
+}
+
+[data-theme="dark"] .progress-card,
+[data-theme="dark"] .stat-card,
+[data-theme="dark"] .message-card,
+[data-theme="dark"] .relapse-card {
+    background: var(--dark-card-bg);
+    border-color: var(--dark-border-color);
+}
+
+[data-theme="dark"] .form-control {
+    background: var(--dark-input-bg);
+    border-color: var(--dark-border-color);
+    color: var(--dark-text-color);
+}
+
+[data-theme="dark"] .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.2);
+}
+
+[data-theme="dark"] .modal-content {
+    background: var(--dark-card-bg);
+}
+
+[data-theme="dark"] .modal-header {
+    border-color: var(--dark-border-color);
+} 

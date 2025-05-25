@@ -1,0 +1,590 @@
+/* Cards de Humor */
+.humor-card {
+    background: var(--bs-card-bg);
+    border: 2px solid var(--bs-border-color);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.humor-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.humor-card.selected {
+    border-color: var(--bs-primary);
+    background-color: var(--bs-primary-bg-subtle);
+}
+
+.humor-card .emoji {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.humor-card .label {
+    font-size: 0.9rem;
+    color: var(--bs-body-color);
+}
+
+/* Pills de Gatilhos */
+.gatilho-pill {
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.gatilho-pill.selected {
+    background-color: var(--bs-primary);
+    color: white;
+}
+
+/* Cards de Energia */
+.energia-card {
+    background: var(--bs-card-bg);
+    border: 2px solid var(--bs-border-color);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.energia-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.energia-card.selected {
+    border-color: var(--bs-primary);
+    background-color: var(--bs-primary-bg-subtle);
+}
+
+.energia-card .icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.energia-card .label {
+    font-size: 0.9rem;
+    color: var(--bs-body-color);
+}
+
+/* Cards de Conquista */
+.conquista-card {
+    background: var(--bs-card-bg);
+    border: 2px solid var(--bs-border-color);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.conquista-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.conquista-card.selected {
+    border-color: var(--bs-primary);
+    background-color: var(--bs-primary-bg-subtle);
+}
+
+.conquista-card .icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.conquista-card .label {
+    font-size: 0.9rem;
+    color: var(--bs-body-color);
+}
+
+/* Barra de Navegação Inferior */
+.nav-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--bs-body-bg);
+    border-top: 1px solid var(--bs-border-color);
+    padding: 0.5rem 0;
+    z-index: 1000;
+}
+
+.nav-bottom .nav-link {
+    color: var(--bs-body-color);
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.nav-bottom .nav-link.active {
+    color: var(--bs-primary);
+}
+
+.nav-bottom .nav-link i {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+/* Ajustes para o tema escuro */
+[data-bs-theme="dark"] .humor-card,
+[data-bs-theme="dark"] .energia-card,
+[data-bs-theme="dark"] .conquista-card {
+    background: var(--bs-dark);
+    border-color: var(--bs-border-color);
+}
+
+[data-bs-theme="dark"] .humor-card.selected,
+[data-bs-theme="dark"] .energia-card.selected,
+[data-bs-theme="dark"] .conquista-card.selected {
+    background-color: var(--bs-primary-bg-subtle);
+}
+
+/* Ajustes para mobile */
+@media (max-width: 576px) {
+    .container {
+        padding-bottom: 5rem;
+    }
+    
+    .humor-card,
+    .energia-card,
+    .conquista-card {
+        padding: 0.75rem;
+    }
+    
+    .humor-card .emoji,
+    .energia-card .icon,
+    .conquista-card .icon {
+        font-size: 1.5rem;
+    }
+    
+    .humor-card .label,
+    .energia-card .label,
+    .conquista-card .label {
+        font-size: 0.8rem;
+    }
+}
+
+/* Formulário do Diário */
+.diary-form {
+    padding: var(--spacing-md);
+}
+
+.diary-section {
+    margin-bottom: var(--spacing-xl);
+    animation: slideIn 0.3s ease-out;
+}
+
+.diary-section h2 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+/* Grid de Humor */
+.mood-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--spacing-sm);
+}
+
+.mood-card {
+    background: var(--surface-color);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-md);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.mood-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.mood-card.selected {
+    border-color: var(--primary-color);
+    background: var(--primary-color-light);
+}
+
+.mood-emoji {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.mood-label {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+/* Grid de Gatilhos */
+.triggers-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.triggers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+}
+
+.trigger-pill {
+    background: var(--surface-color);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius-full);
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-sm);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.trigger-pill:hover {
+    background: var(--primary-color-light);
+    border-color: var(--primary-color);
+}
+
+.trigger-pill.selected {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.other-trigger {
+    margin-top: var(--spacing-sm);
+}
+
+/* Grid de Energia */
+.energy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+}
+
+.energy-card {
+    background: var(--surface-color);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-md);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.energy-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.energy-card.selected {
+    border-color: var(--primary-color);
+    background: var(--primary-color-light);
+}
+
+.energy-icon {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.energy-label {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+/* Grid de Conquistas */
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+}
+
+.achievement-card {
+    background: var(--surface-color);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-md);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.achievement-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.achievement-card.selected {
+    border-color: var(--primary-color);
+    background: var(--primary-color-light);
+}
+
+.achievement-icon {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.achievement-label {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+/* Área de Texto */
+.note-container {
+    margin-top: var(--spacing-md);
+}
+
+.note-container textarea {
+    width: 100%;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    border: 2px solid var(--border-color);
+    background: var(--surface-color);
+    color: var(--text-primary);
+    font-size: var(--font-size-md);
+    resize: none;
+    transition: all 0.2s ease;
+}
+
+.note-container textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Botões de Navegação */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-md);
+    position: sticky;
+    bottom: 0;
+    background: var(--background-color);
+    border-top: 1px solid var(--border-color);
+}
+
+.navigation-buttons button {
+    flex: 1;
+    padding: var(--spacing-md);
+    font-size: var(--font-size-md);
+    font-weight: 500;
+}
+
+/* Animações */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 360px) {
+    .mood-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .energy-grid,
+    .achievement-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tema Escuro */
+[data-bs-theme="dark"] .mood-card,
+[data-bs-theme="dark"] .energy-card,
+[data-bs-theme="dark"] .achievement-card,
+[data-bs-theme="dark"] .trigger-pill {
+    background: var(--surface-color-dark);
+    border-color: var(--border-color-dark);
+}
+
+[data-bs-theme="dark"] .mood-card.selected,
+[data-bs-theme="dark"] .energy-card.selected,
+[data-bs-theme="dark"] .achievement-card.selected {
+    background: var(--primary-color-dark);
+    border-color: var(--primary-color);
+}
+
+[data-bs-theme="dark"] .trigger-pill.selected {
+    background: var(--primary-color-dark);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+[data-bs-theme="dark"] .note-container textarea {
+    background: var(--surface-color-dark);
+    border-color: var(--border-color-dark);
+    color: var(--text-primary);
+}
+
+[data-bs-theme="dark"] .navigation-buttons {
+    background: var(--background-color);
+    border-color: var(--border-color-dark);
+}
+
+/* Estilos para a tela de progresso do diário */
+
+/* Resumo do Progresso */
+.progress-summary {
+    background: var(--card-bg);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
+/* Lista de Gatilhos */
+.triggers-summary {
+    background: var(--card-bg);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
+.triggers-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.trigger-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm);
+    background: var(--bg-color);
+    border-radius: var(--border-radius-md);
+}
+
+.trigger-name {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.trigger-count {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--border-radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+}
+
+/* Lista de Conquistas */
+.achievements-summary {
+    background: var(--card-bg);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
+.achievements-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.achievement-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm);
+    background: var(--bg-color);
+    border-radius: var(--border-radius-md);
+}
+
+.achievement-name {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.achievement-count {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--border-radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+}
+
+/* Histórico de Registros */
+.history-section {
+    background: var(--card-bg);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.history-item {
+    padding: var(--spacing-md);
+    background: var(--bg-color);
+    border-radius: var(--border-radius-md);
+}
+
+.history-date {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.history-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.history-mood,
+.history-energy,
+.history-note {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
+}
+
+.history-mood i,
+.history-energy i,
+.history-note i {
+    color: var(--primary-color);
+}
+
+/* Tema Escuro */
+[data-theme="dark"] .progress-summary,
+[data-theme="dark"] .triggers-summary,
+[data-theme="dark"] .achievements-summary,
+[data-theme="dark"] .history-section {
+    background: var(--dark-card-bg);
+    border-color: var(--dark-border-color);
+}
+
+[data-theme="dark"] .trigger-item,
+[data-theme="dark"] .achievement-item,
+[data-theme="dark"] .history-item {
+    background: var(--dark-bg-color);
+} 
